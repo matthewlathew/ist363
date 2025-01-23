@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.circle {
+    background: orange;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 0 auto;
+    transition: 1s;
+}
+.circle:hover {
+    transform: rotate(360deg);
+    background-color: rgb(29, 17, 162);
+}
+h3 {
+    padding: 20px;
+    color: aliceblue;
+}
+.otto {
+    position: absolute;
+    left: -150px;
+    animation-name: scoot;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes scoot{
+    from {transform: translateX(0);}
+    to {transform: translateX(1200px)}
+}
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <h3>Go Orange</h1>
+    </div>
+    <div class="otto">
+        <img src="https://laferger.github.io/ist363/images/otto-on-skateboard.png ">
+    </div>
+</body>
+</html>
