@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+.button {
+    width: 120px;
+    height: 35px;
+    border-radius: 15%;
+    background-color: white;
+    color: orange;
+    border: 3px solid orange;
+    text-align: center;
+    line-height: 35px;
+}
+
+.button:hover {
+background-color: orange;
+color: white;
+transition: 1s;
+}
+
+.button:active::before {
+content: "✔";
+}
+</style>
+
+<body>
+    <div class="button">
+Submit
+    </div>
+</body>
+</html>
