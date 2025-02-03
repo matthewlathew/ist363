@@ -1,0 +1,162 @@
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/mixins";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+body {
+    @include font;
+}
+.header {
+    background-color: $heading;
+    color: white;
+    padding: 20px;
+    padding-top: 30px;
+}
+h1 {
+    text-align: center;
+    font-size: 2em;
+}
+nav {
+    text-align: center;
+    padding: 10px;
+    padding-top: 25px;
+    flex-wrap: wrap;
+    a {
+        padding: 5px;
+        color: white;
+        text-decoration: none;
+    }
+    a:hover{
+        transition: .5s;
+        font-size: 1.20em;
+    }
+}
+
+button {
+background-color: $heading;
+color: white;
+border-color: $heading;
+border-radius: 5px;
+}
+.latest, .older {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+h3 {
+    color: $heading_color;
+}
+.food {
+    margin: 10px;
+    border-radius: 20px;
+    @include shadow;
+   display: flex;
+   flex-wrap: wrap;
+    
+    img{
+        max-width: 100%;
+        border-radius: 20px 20px 0px 0px;
+        flex: 1 1 200px;
+        height: auto;
+    }
+    h3 {
+        text-align: center;
+        padding: 20px;
+    }
+    
+}
+
+.title {
+    width: 350px;
+    padding-top: 10px;
+    margin: 5px;
+}
+.news {
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    @include shadow;
+    background-color: $footer;
+
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        max-width: 100%;
+    }
+    p {
+        padding: 10px;
+        padding-bottom: 20px;
+    }
+input {
+    width: 300px;
+    border: 1px solid $heading;
+    border-radius: 3px;
+}
+}
+.bigpic {
+    padding-top: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+   
+    
+    img {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+   
+}
+
+.latest, .older, .about {
+    h2 {
+        @include size;
+        color: $heading_color;
+    }
+}
+
+.about {
+    padding: 10px;
+max-width: 100%;
+text-align: center;
+.but {
+    padding-top: 15px;
+}
+.abo {
+    padding: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+}
+.footer {
+    background-color: $footer_color;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    a {
+        padding: 10px;
+        text-align: center;    }
+        .top {
+            padding: 10px;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            text-align: center;
+        }
+    }
+    
+    
