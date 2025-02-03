@@ -160,6 +160,7 @@ h3 {
 .food img {
   max-width: 100%;
   border-radius: 20px 20px 0px 0px;
+  flex-wrap: wrap;
 }
 .food h3 {
   text-align: center;
