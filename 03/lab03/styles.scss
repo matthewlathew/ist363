@@ -42,7 +42,7 @@ border-radius: 5px;
     display: flex;
     padding-top: 20px;
     padding-bottom: 10px;
-    width: 100%;
+    flex-wrap: wrap;
 }
 h3 {
     color: $heading_color;
@@ -51,14 +51,12 @@ h3 {
     margin: 10px;
     border-radius: 20px;
     @include shadow;
-   display: flex;
-   flex-wrap: wrap;
-   
-    
+    width: 275px;
+  
     img{
-        max-width: 100%;
         border-radius: 20px 20px 0px 0px;
-        flex-wrap: wrap;
+        max-width: 100%
+
         
     }
     h3 {
@@ -69,7 +67,7 @@ h3 {
 }
 
 .title {
-    width: 400px;
+    width: 200px;
     padding-top: 10px;
     margin: 5px;
 }
@@ -156,4 +154,8 @@ text-align: center;
         }
     }
     
-    
+    @media only screen and (max-width: 760px) {
+        .food {
+          width: 500px;
+        }
+      }
