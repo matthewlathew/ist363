@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // #1
+        let myVar = 11;
+        console.log("My favorite number is " + myVar + ".")
+
+        // #2
+        let favoriteFoods = ["icecream", "butter", "mayo", "soup"];
+        console.log(favoriteFoods[2]);
+        favoriteFoods.push("muffin")
+        console.log(favoriteFoods);
+
+        // #3
+        for (let i = 0; i < favoriteFoods.length; i++) {
+            console.log("Favorite Food " + [i + 1] + ": " + favoriteFoods[i]);
+        }
+
+
+        // #4
+        for (let i = 0; i < favoriteFoods.length; i++) {
+            if (i != 1) {console.log("Favorite Food " + [i + 1] + ": " +favoriteFoods[i]);}
+        }
+        
+        // #5
+        let book = {
+            title: "The Berk Files",
+            author: "Matt Latvis",
+            yearPublished: 2023,
+            isAvailable: false
+        };
+        console.log (book.title, book.author);
+
+        if (isAvailable = "true") {
+            console.log("This book is available for checkout.")
+        }
+        if (isAvailable = "false") {
+            console.log("Sorry, this book is currently checked out.");
+        }
+
+        // #6
+        let x = 0;
+        while (x<= 20) {
+            console.log(x);
+            x = x + 2;
+        }
+
+        // #7
+        let randomNumber = Math.floor(Math.random() * 6) + 1;
+        console.log (randomNumber);
+    </script>
+
+</body>
+</html>
