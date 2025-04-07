@@ -1,0 +1,10 @@
+<script>
+async function fetchData() {
+    const url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard";
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data); 
+}
+fetchData();
+</script>
+

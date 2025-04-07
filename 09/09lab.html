@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather Data</title>
+</head>
+<body>
+
+    <script>
+        function reportResults(response) {
+            let weatherData = '';
+
+            if (response !== 'error') {
+                const myData = JSON.parse(response); 
+
+              
+                const temperature = myData.current.temperature_2m;
+                const cloudCover = myData.current.cloud_cover;
+                const precipitation = myData.current.precipitation;
+
+                document.getElementById('temperature').textContent = temperature;
+                document.getElementById('cloudCover').textContent = cloudCover;
+                document.getElementById('precipitation').textContent = precipitation;
+
+            document.getElementById('data').innerHTML = weatherData;
+        }
+    }
+
+        const endpoint = 'https://api.open-meteo.com/v1/forecast?latitude=43.0481&longitude=-76.1474&current=temperature_2m,cloud_cover,precipitation&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch';
+
+        const request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.readyState === 4) {
+                if (request.status === 200) {
+                    reportResults(request.responseText);
+                } else {
+                    reportResults('error');
+                }
+            }
+        };
+
+        request.open('GET', endpoint, true); 
+        request.send();
+    </script>
+</body>
+</html>
