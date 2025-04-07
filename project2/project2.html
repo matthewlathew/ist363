@@ -150,30 +150,30 @@ header, footer {
 
       events.forEach(({competitions, status }) => {
 
-        const [a, b] =competitions[0].competitors;
+        const [homeTeam, awayTeam] =competitions[0].competitors;
 
-        const home = a.homeAway === 'home' ? a : b;
-        const away = a.homeAway=== 'away' ? a : b;
+        const home = homeTeam.homeAway === 'home' ? homeTeam : awayTeam;
+        const away = homeTeam.homeAway=== 'away' ? homeTeam : awayTeam;
 
-        const hScore = Number(home.score) || 0;
-        const aScore =Number(away.score) || 0;
+        const homeScore = Number(home.score) || 0;
+        const awayScore =Number(away.score) || 0;
 
-        let hColor = 'black';
-        let aColor ='black';
+        let homeColor = 'black';
+        let awayColor ='black';
 
-        if (hScore > aScore) {
-            hColor= 'green';
-            aColor = 'red';
-        } else if (aScore > hScore) {
-            aColor ='green';
-            hColor = 'red'
+        if (homeScore > awayScore) {
+            homeColor= 'green';
+            awayColor = 'red';
+        } else if (awayScore > homeScore) {
+            awayColor ='green';
+            homeColor = 'red'
         }
 
         const display = document.createElement('li')
 
     display.innerHTML = 
-      '<strong style="color:' +aColor + '">' + away.team.displayName+ ' (' + aScore + ')</strong> vs ' + 
-      '<strong style="color:' + hColor+ '">' + home.team.displayName +' (' + hScore + ')</strong>' + '<p>'+status.type.description+'</p>';
+      '<strong style="color:' +awayColor + '">' + away.team.displayName+ ' (' + awayScore + ')</strong> vs ' + 
+      '<strong style="color:' + homeColor+ '">' + home.team.displayName +' (' + homeScore + ')</strong>' + '<p>'+status.type.description+'</p>';
 
     list.appendChild(display);
   });
