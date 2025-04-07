@@ -174,7 +174,7 @@ header, footer {
     display.innerHTML = 
       '<strong style="color:' +awayColor + '">' + away.team.displayName+ ' (' + awayScore + ')</strong> VS ' + 
       '<strong style="color:' + homeColor+ '">' + home.team.displayName +' (' + homeScore + ')</strong>' + 
-      '<p>'+status.type.description+'</p>';
+      status.type.description;
 
     list.appendChild(display);
   });
