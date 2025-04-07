@@ -138,8 +138,8 @@ header, footer {
     document.getElementById('loadScores').onclick = async () => {
       scoreboard.innerHTML = '';
       try {
-        const res = await fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard');
-        const { events } = await res.json();
+        const balldata = await fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard');
+        const { events } = await balldata.json();
 
         if (!events.length) {
           scoreboard.innerHTML ='<p>No games being played today. </p>';
@@ -169,13 +169,13 @@ header, footer {
             hColor = 'red'
         }
 
-        const item = document.createElement('li')
+        const display = document.createElement('li')
 
-    item.innerHTML = 
+    display.innerHTML = 
       '<strong style="color:' +aColor + '">' + away.team.displayName+ ' (' + aScore + ')</strong> vs ' + 
       '<strong style="color:' + hColor+ '">' + home.team.displayName +' (' + hScore + ')</strong>' + '<p>'+status.type.description+'</p>';
 
-    list.appendChild(item);
+    list.appendChild(display);
   });
 
         scoreboard.appendChild(list);
@@ -188,13 +188,13 @@ header, footer {
 
     async function loadImages(query = 'basketball', count = 8) {
       try {
-        const res = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=${count}&client_id=${key}`);
-        const { results } = await res.json();
+        const unsplash = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=${count}&client_id=${key}`);
+        const { results } = await unsplash.json();
 
         results.forEach(img => {
-          const el=document.createElement('img');
-          el.src = img.urls.regular;
-          gallery.appendChild(el);
+          const photo=document.createElement('img');
+          photo.src = img.urls.regular;
+          gallery.appendChild(photo);
         });
       } catch {
         gallery.innerHTML= '<p style = "color:red;">Could not load images.</p>';
