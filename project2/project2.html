@@ -173,8 +173,7 @@ header, footer {
 
     display.innerHTML = 
       '<strong style="color:' +awayColor + '">' + away.team.displayName+ ' (' + awayScore + ')</strong> VS ' + 
-      '<strong style="color:' + homeColor+ '">' + home.team.displayName +' (' + homeScore + ')</strong>' + 
-      status.type.description;
+      '<strong style="color:' + homeColor+ '">' + home.team.displayName +' (' + homeScore + ')</strong>' + status.type.description;
 
     list.appendChild(display);
   });
@@ -194,7 +193,7 @@ header, footer {
 
         results.forEach(img => {
           const photo=document.createElement('img');
-          photo.src = img.urls.regular;
+          photo.src = img.urls;
           gallery.appendChild(photo);
         });
       } catch {
