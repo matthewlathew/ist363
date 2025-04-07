@@ -126,7 +126,7 @@ header, footer {
       </header>
 
   <h1>NBA Games Today</h1>
-  <button id="loadScores">Get Live Scores</button>
+  <button id="scores">Get Live Scores</button>
   <div class="scoreboard" id="scoreboard"></div>
   <div class="gallery" id="gallery"></div>
 
@@ -135,7 +135,7 @@ header, footer {
     const gallery = document.getElementById('gallery');
       const key= 'lWqgRt1U3ErnaJZfsEF900NjXQJe-OBiSB3kO9TJhBQ'; //unsplash key DONT DELETE
 
-    document.getElementById('loadScores').onclick = async () => {
+    document.getElementById('scores').onclick = async () => {
       scoreboard.innerHTML = '';
       try {
         const balldata = await fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard');
