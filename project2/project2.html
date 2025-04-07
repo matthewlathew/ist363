@@ -193,7 +193,7 @@ header, footer {
 
         results.forEach(img => {
           const photo=document.createElement('img');
-          photo.src = img.urls;
+          photo.src = img.urls.regular;
           gallery.appendChild(photo);
         });
       } catch {
