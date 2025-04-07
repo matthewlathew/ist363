@@ -194,7 +194,6 @@ header, footer {
         results.forEach(img => {
           const el=document.createElement('img');
           el.src = img.urls.regular;
-          el.alt =img.alt_description|| 'Basketball';
           gallery.appendChild(el);
         });
       } catch {
