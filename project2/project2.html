@@ -40,10 +40,9 @@ header, footer {
     button {
       background: red;
       color: white;
-      border-radius: 5px;
       padding: 12px 24px;
       cursor: pointer;
-      margin: 20px auto;
+      margin: 15px auto;
       display: inline-block;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
@@ -126,7 +125,7 @@ header, footer {
       </header>
 
   <h1>NBA Games Today</h1>
-  <button id="scores">Get Live Scores</button>
+  <button id="scores">Click Me for Todays Scores!</button>
   <div class="scoreboard" id="scoreboard"></div>
   <div class="gallery" id="gallery"></div>
 
@@ -171,8 +170,8 @@ header, footer {
         let display = document.createElement('li')
 
     display.innerHTML = 
-      '<strong style="color:' +awayColor + '">' + away.team.displayName+ ' (' + awayScore + ')</strong> VS ' + 
-      '<strong style="color:' + homeColor+ '">' + home.team.displayName +' (' + homeScore + ')</strong>' + status.type.description;
+      '<strong style="color:' +awayColor + '">'+ away.team.displayName+ ' ('+awayScore+')</strong> VS ' + 
+      '<strong style="color:' + homeColor+ '">' + home.team.displayName+' ('+homeScore +')</strong>' + status.type.description;
 
     list.appendChild(display);
   });
