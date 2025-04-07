@@ -133,7 +133,7 @@ header, footer {
   <script>
     const scoreboard = document.getElementById('scoreboard');
     const gallery = document.getElementById('gallery');
-      const key = 'lWqgRt1U3ErnaJZfsEF900NjXQJe-OBiSB3kO9TJhBQ'; //unsplash key DONT DELETE
+      const key= 'lWqgRt1U3ErnaJZfsEF900NjXQJe-OBiSB3kO9TJhBQ'; //unsplash key DONT DELETE
 
     document.getElementById('loadScores').onclick = async () => {
       scoreboard.innerHTML = '';
@@ -142,39 +142,38 @@ header, footer {
         const { events } = await res.json();
 
         if (!events.length) {
-          scoreboard.innerHTML = '<p>No games being played today.</p>';
+          scoreboard.innerHTML ='<p>No games being played today. </p>';
           return;
         }
 
-        const list = document.createElement('ul');
+        const list =document.createElement('ul');
 
-      events.forEach(({ competitions, status }) => {
+      events.forEach(({competitions, status }) => {
 
-        const [a, b] = competitions[0].competitors;
+        const [a, b] =competitions[0].competitors;
 
         const home = a.homeAway === 'home' ? a : b;
-        const away = a.homeAway === 'away' ? a : b;
+        const away = a.homeAway=== 'away' ? a : b;
 
         const hScore = Number(home.score) || 0;
-        const aScore = Number(away.score) || 0;
+        const aScore =Number(away.score) || 0;
 
         let hColor = 'black';
-        let aColor = 'black';
+        let aColor ='black';
 
         if (hScore > aScore) {
-            hColor = 'green';
+            hColor= 'green';
             aColor = 'red';
         } else if (aScore > hScore) {
-            aColor = 'green';
+            aColor ='green';
             hColor = 'red';
         }
 
         const item = document.createElement('li');
 
     item.innerHTML = 
-      '<strong style="color:' + aColor + '">' + away.team.displayName + ' (' + aScore + ')</strong> vs ' + 
-      '<strong style="color:' + hColor + '">' + home.team.displayName + ' (' + hScore + ')</strong>' + 
-      '<p>' + status.type.description + '</p>';
+      '<strong style="color:' +aColor + '">' + away.team.displayName+ ' (' + aScore + ')</strong> vs ' + 
+      '<strong style="color:' + hColor+ '">' + home.team.displayName +' (' + hScore + ')</strong>' + '<p>'+status.type.description+'</p>';
 
     list.appendChild(item);
   });
@@ -193,13 +192,13 @@ header, footer {
         const { results } = await res.json();
 
         results.forEach(img => {
-          const el = document.createElement('img');
+          const el=document.createElement('img');
           el.src = img.urls.regular;
-          el.alt = img.alt_description || 'Basketball';
+          el.alt =img.alt_description|| 'Basketball';
           gallery.appendChild(el);
         });
       } catch {
-        gallery.innerHTML = '<p style = "color:red;">Could not load images.</p>';
+        gallery.innerHTML= '<p style = "color:red;">Could not load images.</p>';
       }
     }
 
