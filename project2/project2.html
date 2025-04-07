@@ -155,8 +155,8 @@ header, footer {
         const home = homeTeam.homeAway === 'home' ? homeTeam : awayTeam
         const away = homeTeam.homeAway=== 'away' ? homeTeam : awayTeam
 
-        const homeScore = Number(home.score) || 0;
-        const awayScore =Number(away.score) || 0;
+        const homeScore = Number(home.score);
+        const awayScore =Number(away.score) ;
 
         let homeColor = 'black';
         let awayColor ='black'
