@@ -152,14 +152,14 @@ header, footer {
 
         const [homeTeam, awayTeam] =competitions[0].competitors;
 
-        const home = homeTeam.homeAway === 'home' ? homeTeam : awayTeam;
-        const away = homeTeam.homeAway=== 'away' ? homeTeam : awayTeam;
+        const home = homeTeam.homeAway === 'home' ? homeTeam : awayTeam
+        const away = homeTeam.homeAway=== 'away' ? homeTeam : awayTeam
 
         const homeScore = Number(home.score) || 0;
         const awayScore =Number(away.score) || 0;
 
         let homeColor = 'black';
-        let awayColor ='black';
+        let awayColor ='black'
 
         if (homeScore > awayScore) {
             homeColor= 'green';
