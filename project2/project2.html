@@ -172,8 +172,9 @@ header, footer {
         const display = document.createElement('li')
 
     display.innerHTML = 
-      '<strong style="color:' +awayColor + '">' + away.team.displayName+ ' (' + awayScore + ')</strong> vs ' + 
-      '<strong style="color:' + homeColor+ '">' + home.team.displayName +' (' + homeScore + ')</strong>' + '<p>'+status.type.description+'</p>';
+      '<strong style="color:' +awayColor + '">' + away.team.displayName+ ' (' + awayScore + ')</strong> VS ' + 
+      '<strong style="color:' + homeColor+ '">' + home.team.displayName +' (' + homeScore + ')</strong>' + 
+      '<p>'+status.type.description+'</p>';
 
     list.appendChild(display);
   });
