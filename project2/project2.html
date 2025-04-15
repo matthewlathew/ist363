@@ -154,11 +154,23 @@
               let list =document.createElement('ul');
       
             events.forEach(({competitions, status }) => {
+
+              /*
       
               const [homeTeam, awayTeam] =competitions[0].competitors;
       
               const home = homeTeam.homeAway === 'home' ? homeTeam : awayTeam
               const away = homeTeam.homeAway=== 'away' ? homeTeam : awayTeam
+
+              */
+
+              const away = competitions[0].competitors.find(
+                team => team.homeAway=== 'away'
+              );
+
+              const home = competitions[0].competitors.find(
+                team => team.homeAway=== 'home'
+              );
        
               const homeScore = Number(home.score);
               const awayScore =Number(away.score) ;
