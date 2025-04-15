@@ -1,0 +1,25 @@
+h2 {
+  margin-left: 10px;
+}
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+img {
+  max-width: 300px;
+  max-height: 300px;
+  
+}
+.bigbox {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.box {
+  border: 1px solid darkgray;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+}
+p {
+  font-size: 1.5rem;
+}

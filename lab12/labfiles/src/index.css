@@ -1,0 +1,51 @@
+h2 {
+  margin-left: 10px;
+}
+.homebody {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+img {
+  max-width: 300px;
+  max-height: 300px;
+  
+}
+.homebigbox {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.homeboxe, .homeboxt, .homeboxr {
+  border: 1px solid darkgray;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+}
+p {
+  font-size: 1.5rem;
+}
+.big {
+  background-color: gray;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+.name {
+  background-color: rgb(118, 118, 118);
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+img {
+  max-width: 300px;
+  max-height: 300px;
+}
+.bigtext {
+  font-size: larger;
+}
+button {
+  color: white;
+  background: rgb(46, 106, 237);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
